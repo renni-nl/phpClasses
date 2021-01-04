@@ -7,7 +7,7 @@ Include the class in your php project and instantiate the class
 ## Usage Functions.class.php
 
 ```php
-require_once 'functions.class.php';
+require_once 'Functions.class.php';
 $functions = new Functions();
 
 LogIPAddress(); //Returns IP address from the client / may return null
