@@ -23,8 +23,7 @@ class Functions {
 		return $ip;
 	}
 	
-	public function GetOS(){ 
-
+    public function GetOS(){ 
     global $user_agent;
 
     $os_platform  = "Unknown OS Platform";
@@ -115,14 +114,14 @@ class Functions {
 	}
 	
 	public function GenerateRandom($length) {
-    $characters = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
-	}
+	    $characters = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+	    for ($i = 0; $i < $length; $i++) {
+		$randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+	    return $randomString;
+		}
 	
 }
 
