@@ -5,7 +5,7 @@ class PDODatabase {
   private $host = 'localhost'; // Your database host
   private $user = 'root'; // Your username for database
   private $password = '1234'; // Your password for the user
-  private $dbname = 'database'; Your database
+  private $dbname = 'database'; //Your database
 
   private $dbhand; // PDO handler
   private $stmt; // PDO statement
