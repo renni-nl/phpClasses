@@ -19,3 +19,15 @@ $functions->GenerateRandom($lenght); //Will generate an random string(letters an
 
 
 ```
+
+## Usage Database.class.php
+
+```php
+require_once 'PDODatabase.class.php';
+$db = new PDODatabase();
+
+$db->DBQuery('SELECT * FROM table'); //Queries an SQL statement to the database
+$result = $db->DBResultSet(); // Saves the result set into $result variable
+
+
+```
