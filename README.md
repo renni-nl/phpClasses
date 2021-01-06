@@ -29,5 +29,10 @@ $db = new PDODatabase();
 $db->DBQuery('SELECT * FROM table'); //Queries an SQL statement to the database
 $result = $db->DBResultSet(); // Saves the result set into $result variable
 
+$db->DBQuery('SELECT * FROM table WHERE id = :id'); // Selecting data with prepared statement
+$db->DBBindValues(':id',1); //Binding the id with actual value
+$result = $db->DBResultSingle(); // Returning single row
+
+
 
 ```
