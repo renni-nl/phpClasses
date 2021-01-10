@@ -23,8 +23,9 @@ class Functions {
 		return $ip;
 	}
 	
-    public function GetOS(){ 
-	    global $user_agent;
+       public function GetOS(){
+	    
+	    $user_agent = $_SERVER['HTTP_USER_AGENT'];
 	    $os_platform  = "Unknown OS Platform";
 
 	    $os_array     = array(
