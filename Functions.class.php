@@ -62,7 +62,7 @@ class Functions {
 	
 	public function GetBrowser(){
            
-          $user_agent = $_SERVER['HTTP_USER_AGENT'];
+           $user_agent = $_SERVER['HTTP_USER_AGENT'];
             $browser = "N/A";
              
             
