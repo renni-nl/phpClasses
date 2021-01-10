@@ -16,6 +16,8 @@ $functions->GetBrowser(); //Returns browser / may return null
 $functions->EncryptData($string,$key); //Will encrypt the $string variable with the $key variable / WARNING: This is not 100% safe encryption, do not use for sensitive data.
 $functions->DecryptData($string,$key); //Will decrypt the $string variable with $key variable/ WARNING: If the $key variable is not the right one used to encrypt - will throw error.
 $functions->GenerateRandom($lenght); //Will generate an random string(letters and numbers) with the lenght specified. Modify $characters if you want only letters or numbers.
+$functions->RedirectTo('www.google.com'); // Will redirect to www.google.com
+$funcions->FileExists($file,$path); // Check if $file exists within $path
 
 
 ```
