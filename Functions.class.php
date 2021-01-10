@@ -1,8 +1,8 @@
 <?php
 class Functions {
-	
+
 	public function LogIPAddress(){
-	
+
 		$client  = @$_SERVER['HTTP_CLIENT_IP'];
 		$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
 		$remote  = $_SERVER['REMOTE_ADDR'];
@@ -22,9 +22,9 @@ class Functions {
 
 		return $ip;
 	}
-	
+
        public function GetOS(){
-	    
+
 	    $user_agent = $_SERVER['HTTP_USER_AGENT'];
 	    $os_platform  = "Unknown OS Platform";
 
@@ -60,13 +60,13 @@ class Functions {
 
 			    return $os_platform;
 	}
-	
+
 	public function GetBrowser(){
-           
+
             $user_agent = $_SERVER['HTTP_USER_AGENT'];
             $browser = "N/A";
-             
-            
+
+
             $browsers = array(
             '/msie/i' => 'Internet explorer',
             '/firefox/i' => 'Firefox',
@@ -76,13 +76,13 @@ class Functions {
             '/opera/i' => 'Opera',
             '/mobile/i' => 'Mobile browser'
             );
-            
+
             foreach ($browsers as $regex => $value) {
             if (preg_match($regex, $user_agent)) { $browser = $value; }
             }
             return $browser;
 	}
-	
+
 	public function EncryptData($string, $key) {
 	  $result = '';
 	  for($i=0; $i<strlen($string); $i++) {
@@ -108,7 +108,7 @@ class Functions {
 
 	  return $result;
 	}
-	
+
 	public function GenerateRandom($length) {
 	    $characters = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
 	    $charactersLength = strlen($characters);
@@ -118,7 +118,19 @@ class Functions {
 	    }
 	    return $randomString;
 	}
-	
+
+	public function RedirectTo($url){
+		header('Location:'.$url);
+	}
+
+	public function FileExists($file,$path){
+		if(file_exists($path.$file)){
+			return true;
+		} else {
+			return false
+		}
+	}
+
 }
 
 
