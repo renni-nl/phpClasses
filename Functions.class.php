@@ -127,7 +127,7 @@ class Functions {
 		if(file_exists($path.$file)){
 			return true;
 		} else {
-			return false
+			return false;
 		}
 	}
 
